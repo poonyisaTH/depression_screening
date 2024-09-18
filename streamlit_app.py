@@ -145,7 +145,7 @@ with st.form('my_form'):
     }
         
     
-    submitted = st.form_submit_button("Submit")
+submitted = st.form_submit_button("Submit")
 
 # Scoring logic
 if submitted:
