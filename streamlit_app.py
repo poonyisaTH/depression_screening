@@ -113,7 +113,36 @@ with st.form('my_form'):
         "q1": "one",
         "q5": "five",
         "q7": "seven",
-        "q9": "nine"
+        "q9": "nine",
+        "q15": "fifteen",
+        "q19": "nineteen",
+        "q21": "twentyone",
+        "q27": "twentyseven",
+        "q29": "twentynine",
+        "q30": "thirty",
+    }
+
+    ans_yes = {
+        "q2": "two",
+        "q3": "three",
+        "q4": "four",
+        "q6": "six",
+        "q8": "eight",
+        "q10": "ten",
+        "q11": "eleven",
+        "q12": "twelve",
+        "q13": "thirteen",
+        "q14": "fourteen",
+        "q16": "sixteen",
+        "q17": "seventeen",
+        "q18": "eighteen",
+        "q20": "twenty",
+        "q22": "twentytwo",
+        "q23": "twentythree",
+        "q24": "twentyfour",
+        "q25": "twentyfive",
+        "q26": "twentysix",
+        "q28": "twentyeight"
     }
         
     
@@ -122,7 +151,7 @@ with st.form('my_form'):
 # Scoring logic
 if submitted:
     score_no = sum(1 for ans in ans_no.values() if ans == "ไม่ใช่")
-    score_yes = sum(1 for ans in answers.values() if ans == "ใช่")
+    score_yes = sum(1 for ans in ans_yes.values() if ans == "ใช่")
     total_score = score_no + score_yes
 
     # Determine the result based on the score
