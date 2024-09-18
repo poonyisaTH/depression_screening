@@ -55,10 +55,10 @@ st.subheader("แบบประเมินความรู้สึกขอ
 st.divider()
 
 def clear_inputs():
-    st.session_state.name = " "
-    st.session_state.gender = ''
-    st.session_state.age = 0
-    st.session_state.address = False
+    st.session_state["ชื่อ-สกุล"] = ""
+    st.session_state["เพศ"] = "ชาย"  # Default value
+    st.session_state["อายุ(ปี)"] = 0
+    st.session_state["ที่อยู่"] = False
 
 st.header("1.ข้อมูลส่วนตัว")
 name = st.text_input ("ชื่อ-สกุล*",key='ชื่อ-สกุล')
