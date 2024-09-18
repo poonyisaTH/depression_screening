@@ -172,7 +172,7 @@ if submitted:
     add_row_to_gsheet(
         gsheet_connector,
         [[name, gender, age, address,one,two,three,four,five,six,seven,eight,nine,ten,
-          eleven,twelve,thirteen,fourteen,fifteen,sixteen,eighteen,nineteen,twenty,
+          eleven,twelve,thirteen,fourteen,fifteen,sixteen,seventeen,eighteen,nineteen,twenty,
           twentyone,twentytwo,twentythree,twentyfour,twentyfive,twentysix,twentyseven,
           twentyeight,twentynine,thirty, total_score, result]],
     )
