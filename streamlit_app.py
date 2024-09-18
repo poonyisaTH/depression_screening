@@ -29,7 +29,7 @@ def connect_to_gsheet():
 def get_data(gsheet_connector) -> pd.DataFrame:
     values = (
         gsheet_connector.values()
-        .get(spreadsheetId=SPREADSHEET_ID, range=f"{SHEET_NAME}!A:AI")
+        .get(spreadsheetId=SPREADSHEET_ID, range=f"{SHEET_NAME}!A:AJ")
         .execute()
     )
     df = pd.DataFrame(values["values"])
@@ -41,7 +41,7 @@ def get_data(gsheet_connector) -> pd.DataFrame:
 def add_row_to_gsheet(gsheet_connector, row) -> None:
     gsheet_connector.values().append(
         spreadsheetId=SPREADSHEET_ID,
-        range=f"{SHEET_NAME}!A:AI",
+        range=f"{SHEET_NAME}!A:AJ",
         body=dict(values=row),
         valueInputOption="USER_ENTERED",
     ).execute()
