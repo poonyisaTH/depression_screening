@@ -112,15 +112,16 @@ with st.form('my_form'):
     answers = {q: st.radio(q_text, ["ใช่", "ไม่ใช่"]) for q, q_text in questions.items()}
 
     ans_no = {
-        "one": one,
-        "five": five,
-        "nine": nine,
-        "fifteen": fifteen,
-        "nineteen": nineteen,
-        "twentyone": twentyone,
-        "twentyseven": twentyseven,
-        "twentynine": twentynine,
-        "thirty": thirty,
+        'one': one,
+        'five': five,
+        'seven': seven,
+        'nine': nine,
+        'fifteen': fifteen,
+        'nineteen': nineteen,
+        'twentyone': twentyone,
+        'twentyseven': twentyseven,
+        'twentynine': twentynine,
+        'thirty': thirty,
     }
 
     ans_yes = {
