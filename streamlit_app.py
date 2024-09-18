@@ -109,7 +109,7 @@ with st.form('my_form'):
 
     answers = {q: st.radio(q_text, ["ใช่", "ไม่ใช่"]) for q, q_text in questions.items()}
 
-    ans_no:{
+    ans_no = {
         "q1": "one",
         "q5": "five",
         "q7": "seven",
