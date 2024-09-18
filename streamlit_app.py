@@ -74,85 +74,89 @@ if st.button('Clear Inputs'):
 st.header("2.แบบประเมิน")
 # create form screening
 with st.form('my_form'):
-    questions = {
-        "one": "**1.ท่านพอใจกับชีวิตความเป็นอยู่ตอนนี้**",
-        "two": "**2.ท่านไม่อยากทำในสิ่งที่เคยสนใจหรือเคยทำเป็นประจำ**",
-        "three": "**3.ท่านรู้สึกชีวิตของท่านช่วงนี้ว่างเปล่า ไม่รู้จะทำอะไร**",
-        "four": "**4.ท่านรู้สึกเบื่อหน่ายบ่อยๆ**",
-        "five": "**5.ท่านหวังว่าจะมีสิ่งที่ดีเกิดขึ้นในวันหน้า**",
-        "six": "**6.ท่านมีเรื่องกังวลอยู่ตลอดเวลา และเลิกคิดไม่ได้**",
-        "seven": "**7.ส่วนใหญ่แล้วท่านรู้สึกอารมณ์ดี**",
-        "eight": "**8.ท่านรู้สึกกลัวว่าจะมีเรื่องไม่ดีเกิดขึ้นกับท่าน**",
-        "nine": "**9.ส่วนใหญ่ท่านรู้สึกมีความสุข**",
-        "ten": "**10.บ่อยครั้งที่ท่านรู้สึกไม่มีที่พึ่ง**",
-        "eleven": "**11.ท่านรู้สึกกระวนกระวาย กระสับกระส่ายบ่อยๆ**",
-        "twelve": "**12.ท่านชอบอยู่กับบ้านมากกว่าที่จะออกนอกบ้าน**",
-        "thirteen":  "**13.บ่อยครั้งที่ท่านรู้สึกวิตกกังวลเกี่ยวกับชีวิตข้างหน้า**",
-        "fourteen": "**14.ท่านคิดว่าความจำท่านไม่ดีเท่ากับคนอื่น**",
-        "fifteen": "**15.การที่มีชีวิตถึงปัจจุบันนี้ เป็นเรื่องน่ายินดีหรือไม่**",
-        "sixteen": "**16.ท่านรู้สึกหมดกำลังใจ หรือเศร้าใจบ่อยๆ**",
-        "seventeen": "**17.ท่านรู้สึกว่าชีวิตท่านค่อนข้างไม่มีคุณค่า**",
-        "eighteen": "**18.ท่านรู้สึกกังวลมากกับชีวิตที่ผ่านมา**",
-        "nineteen": "**19.ท่านรู้สึกว่าชีวิตนี้ยังมีเรื่องน่าสนุกอีกมาก**",
-        "twenty": "**20.ท่านรู้สึกลำบากที่จะเริ่มต้นทำอะไรใหม่ๆ**",
-        "twentyone": "**21.ท่านรู้สึกกระตือรือร้น**",
-        "twentytwo": "**22.ท่านรู้สึกสิ้นหวัง**",
-        "twentythree":"**23.ท่านคิดว่าคนอื่นดีกว่าท่าน**",
-        "twentyfour": "**24.ท่านอารมณ์เสียง่ายกับเรื่องเล็กๆน้อยๆอยู่เสมอ**",
-        "twentyfive": "**25.ท่านรู้สึกอยากร้องไห้บ่อยๆ**",
-        "twentysix": "**26.ท่านมีความตั้งใจในการทำสิ่งหนึ่งสิ่งใดได้ไม่นาน**",
-        "twentyseven": "**27.ท่านรู้สึกสดชื่นในเวลาตื่นนอนตอนเช้า**",
-        "twentyeight": "**28.ท่านไม่อยากพบปะพูดคุยกับคนอื่น**",
-        "twentynine": "**29.ท่านตัดสินใจอะไรได้เร็ว**",
-        "thirty":  "**30.ท่านมีจิตใจสบายแจ่มใสเหมือนก่อน**",
-    }
+    # Input value screening
+    one=st.radio("**1. ท่านพอใจกับชีวิตความเป็นอยู่ตอนนี้**",["ใช่","ไม่ใช่"])
+    two=st.radio("**2. ท่านไม่อยากทำในสิ่งที่เคยสนใจหรือเคยทำเป็นประจำ**",["ใช่","ไม่ใช่"])
+    three=st.radio("**3. ท่านรู้สึกชีวิตของท่านช่วงนี้ว่างเปล่า ไม่รู้จะทำอะไร**",["ใช่","ไม่ใช่"])
+    four=st.radio("**4. ท่านรู้สึกเบื่อหน่ายบ่อยๆ**",["ใช่","ไม่ใช่"])
+    five=st.radio("ท่านหวังว่าจะมีสิ่งที่ดีเกิดขึ้นในวันหน้า",["ใช่","ไม่ใช่"])
+    six=st.radio("ท่านมีเรื่องกังวลอยู่ตลอดเวลา และเลิกคิดไม่ได้",["ใช่","ไม่ใช่"])
+    seven=st.radio("ส่วนใหญ่แล้วท่านรู้สึกอารมณ์ดี",["ใช่","ไม่ใช่"])
+    eight=st.radio("ท่านรู้สึกกลัวว่าจะมีเรื่องไม่ดีเกิดขึ้นกับท่าน",["ใช่","ไม่ใช่"])
+    nine=st.radio("ส่วนใหญ่ท่านรู้สึกมีความสุข",["ใช่","ไม่ใช่"])
+    ten=st.radio("บ่อยครั้งที่ท่านรู้สึกไม่มีที่พึ้ง",["ใช่","ไม่ใช่"])
+    eleven=st.radio("ท่านรู้สึกกระวนกระวาย หระสับกระส่ายบ่อยๆ",["ใช่","ไม่ใช่"])
+    twelve=st.radio("ท่านชอบอยู่กับบ้่านมากกว่าที่จะออกนอกบ้าน",["ใช่","ไม่ใช่"])
+    thirteen=st.radio("บ่อยครั้งที่ท่านรู้สึกวิตกกังวลเกี่ยวกับชีวิตข้างหน้า",["ใช่","ไม่ใช่"])
+    fourteen=st.radio("ท่านคิดว่าความจำท่านไม่ดีเท่ากับคนอื่น",["ใช่","ไม่ใช่"])
+    fifteen=st.radio("การที่มีชีวิตถึงปัจจุบันนี้ เป็นเรื่องน่ายินดีหรือไม่",["ใช่","ไม่ใช่"])
+    sixteen=st.radio("ท่านรู้สึกหมดกำลังใจ หรือเศร้าใจบ่อยๆ",["ใช่","ไม่ใช่"])
+    seventeen=st.radio("ท่านรู้สึกว่าชีวิตท่านค่อนข้างไม่มีคุณค่า",["ใช่","ไม่ใช่"])
+    eighteen=st.radio("ท่านรู้สึกกังวลมากกับชีวิตที่ผ่านมา",["ใช่","ไม่ใช่"])
+    nineteen=st.radio("ท่านรู้สึกว่าชีวิตนี้ยังมีเรื่องน่าสนุกอีกมาก",["ใช่","ไม่ใช่"])
+    twenty=st.radio("ท่านรู้สึกลำบากที่จะเริ่มต้นทำอะไรใหม่ๆ",["ใช่","ไม่ใช่"])
+    twentyone=st.radio("ท่านรู้สึกกระตือรือร้น",["ใช่","ไม่ใช่"])
+    twentytwo=st.radio("ท่านรู้สึกสิ้นหวัง",["ใช่","ไม่ใช่"])
+    twentythree=st.radio("ท่านคิดว่าคนอื่นดีกว่าท่าน",["ใช่","ไม่ใช่"])
+    twentyfour=st.radio("ท่านอารมณ์เสียง่ายกับเรื่องเล็กๆน้อยๆอยู่เสมอ",["ใช่","ไม่ใช่"])
+    twentyfive=st.radio("ท่านรู้สึกอยากร้องไห้บ่อยๆ",["ใช่","ไม่ใช่"])
+    twentysix=st.radio("ท่านมีความตั้งใจในการทำสิ่งหนึ่งสิ่งใดได้ไม่นาน",["ใช่","ไม่ใช่"])
+    twentyseven=st.radio("ท่านรู้สึกสดชื่นในเวลาตื่นนอนตอนเช้า",["ใช่","ไม่ใช่"])
+    twentyeight=st.radio("ท่านไม่อยากพบปะพูดคุยกับคนอื่น",["ใช่","ไม่ใช่"])
+    twentynine=st.radio("ท่านตัดสินใจอะไรได้เร็ว",["ใช่","ไม่ใช่"])
+    thirty=st.radio("ท่านมีจิตใจสบายแจ่มใสเหมือนก่อน",["ใช่","ไม่ใช่"])
 
-    submitted = st.form_submit_button("Submit")
+    submitted = st.form_submit_button('Show results')
 
-    answers = {q: st.radio(q_text, ["ใช่", "ไม่ใช่"]) for q, q_text in questions.items()}
+    
+    #Calculate score
 
-    ans_no = {
-        'one': one,
-        'five': five,
-        'seven': seven,
-        'nine': nine,
-        'fifteen': fifteen,
-        'nineteen': nineteen,
-        'twentyone': twentyone,
-        'twentyseven': twentyseven,
-        'twentynine': twentynine,
-        'thirty': thirty,
-    }
 
-    ans_yes = {
-        'two': two,
-        'three': three,
-        'four': four,
-        'six': six,
-        'eight': eight,
-        'ten': ten,
-        'eleven': eleven,
-        'twelve': twelve,
-        'thriteen': thirteen,
-        'fourteen': fourteen,
-        'sixteen': sixteen,
-        'seventeen': seventeen,
-        'eighteen': eighteen,
-        'twenty': twenty,
-        'twentytwo': twentytwo,
-        'twentythree': twentythree,
-        'twentyfour': twentyfour,
-        'twentyfive': twentyfive,
-        'twentysix': twentysix,
-        'twentyeight': twentyeight,
-    }
-        
+        # Define a dictionary to map each variable to its corresponding score
+    score_mapping_no = {
+            'one': one,
+            'five': five,
+            'seven': seven,
+            'nine': nine,
+            'fifteen': fifteen,
+            'nineteen': nineteen,
+            'twentyone': twentyone,
+            'twentyseven': twentyseven,
+            'twentynine': twentynine,
+            'thirty': thirty,
+            }
+
+        # Define a dictionary to map each variable to its corresponding score
+    score_mapping_yes = {
+            'two': two,
+            'three': three,
+            'four': four,
+            'six': six,
+            'eight': eight,
+            'ten': ten,
+            'eleven': eleven,
+            'twelve': twelve,
+            'thriteen': thirteen,
+            'fourteen': fourteen,
+            'sixteen': sixteen,
+            'seventeen': seventeen,
+            'eighteen': eighteen,
+            'twenty': twenty,
+            'twentytwo': twentytwo,
+            'twentythree': twentythree,
+            'twentyfour': twentyfour,
+            'twentyfive': twentyfive,
+            'twentysix': twentysix,
+            'twentyeight': twentyeight,
+            }
+
 
 # Scoring logic
 if submitted:
-    score_no = sum(1 for ans in ans_no.values() if ans == "ไม่ใช่")
-    score_yes = sum(1 for ans in ans_yes.values() if ans == "ใช่")
-    total_score = score_no + score_yes
+    total_no = sum(1 for value in score_mapping_no.values() if value == 'ไม่ใช่')
+    total_yes = sum(1 for value in score_mapping_yes.values() if value == 'ใช่')
+    total_score = total_no+total_yes
+
 
     # Determine the result based on the score
     if total_score <= 12:
