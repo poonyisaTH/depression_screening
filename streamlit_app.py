@@ -107,6 +107,8 @@ with st.form('my_form'):
         "thirty":  "**30.ท่านมีจิตใจสบายแจ่มใสเหมือนก่อน**",
     }
 
+    submitted = st.form_submit_button("Submit")
+
     answers = {q: st.radio(q_text, ["ใช่", "ไม่ใช่"]) for q, q_text in questions.items()}
 
     ans_no = {
@@ -144,8 +146,6 @@ with st.form('my_form'):
         'twentyeight': twentyeight,
     }
         
-    
-submitted = st.form_submit_button("Submit")
 
 # Scoring logic
 if submitted:
